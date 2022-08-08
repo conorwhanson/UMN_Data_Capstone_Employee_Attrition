@@ -13,29 +13,27 @@ def home():
 
 ## app route to prediction engine
 @app.route("/predictionengine")
-def scrape():
+def predict():
     
     return render_template('/predictionengine')
 
 ## app route to data viz
 @app.route("/tableauviz")
-def scrape():
+def viz():
     
     return render_template('/tableauviz')
 
 ## define app route to about us page
 @app.route("/aboutus")
-def scrape():
+def about():
     
     return render_template('/aboutus')
 
 ## app route to works cited page
 @app.route("/workscited")
-def scrape():
+def works():
     
     return render_template('/workscited')
-
-
 
 if __name__ == "__main_":
     app.run(debug=True)

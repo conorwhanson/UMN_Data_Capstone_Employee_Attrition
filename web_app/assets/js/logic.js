@@ -11,6 +11,6 @@ function predict_ml() {
     var role = $("#role").val();
     var dept = $("#dept").val();
     var travel = $("#travel").val();
-
+    
 
 }

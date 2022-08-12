@@ -26,6 +26,8 @@ function makePredictions() {
             // print it
             console.log(returnedData);
 
+            
+
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert("Status: " + textStatus);

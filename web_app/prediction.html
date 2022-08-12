@@ -62,23 +62,23 @@
 											<div class="col-4 col-12-xsmall">
 												<select name="demo-name" id="role">
 													<option value="">Job Role</option>
-													<option value="1">Healthcare Representative</option>
-													<option value="2">Reasearch Scientist</option>
-													<option value="3">Sales Executive</option>
-													<option value="4">Human Resources</option>
-													<option value="5">Research Director</option>
-													<option value="6">Laboratory Technician</option>
-													<option value="7">Manufacturing Director</option>
-													<option value="8">Sales Representative</option>
-													<option value="9">Manager</option>
+													<option>Healthcare Representative</option>
+													<option>Reasearch Scientist</option>
+													<option>Sales Executive</option>
+													<option>Human Resources</option>
+													<option>Research Director</option>
+													<option>Laboratory Technician</option>
+													<option>Manufacturing Director</option>
+													<option>Sales Representative</option>
+													<option>Manager</option>
 													</select>
 											</div>
 											<div class="col-4 col-12-xsmall">
 												<select name="demo-name" id="travel">
 													<option>Travel For Work?</option>
-													<option>Not at all</option>
-													<option>Rarely</option>
-													<option>Frequently</option>
+													<option value="Non-Travel">Not at all</option>
+													<option value="Travel_Rarely">Rarely</option>
+													<option value="Travel_Frequently">Frequently</option>
 													</select>
 											</div>
 											<div class="col-4 col-12-xsmall">
@@ -96,12 +96,12 @@
 											<div class="col-4 col-12-xsmall">
 												<select name="demo-name" id="edfield">
 													<option value="">Education Field</option>
-													<option value="1">Life Sciences</option>
-													<option value="2">Medical</option>
-													<option value="3">Marketing</option>
-													<option value="4">Technical Degree</option>
-													<option value="5">Human Resources</option>
-													<option value="6">Other</option>
+													<option>Life Sciences</option>
+													<option>Medical</option>
+													<option>Marketing</option>
+													<option>Technical Degree</option>
+													<option>Human Resources</option>
+													<option>Other</option>
 													</select>
 											</div>
 											<div class="col-4 col-12-small">
@@ -122,33 +122,16 @@
 													<option value="3">Divorced</option>
 													</select>
 											</div>
-											<!-- NEW ROW -->
-											<div class="col-4 col-12-xsmall">
-												<select name="demo-name" id="dept">
-													<option value="">Department</option>
-													<option value="1">Sales</option>
-													<option value="2">Reasearch and Development</option>
-													<option value="3">Human Resources</option>
-													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<select name="demo-name" id="dept">
-													<option value="">Department</option>
-													<option value="1">Sales</option>
-													<option value="2">Reasearch and Development</option>
-													<option value="3">Human Resources</option>
-													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<select name="demo-name" id="dept">
-													<option value="">Department</option>
-													<option value="1">Sales</option>
-													<option value="2">Reasearch and Development</option>
-													<option value="3">Human Resources</option>
-													</select>
-											</div>
 
 											<!-- NEW ROW -->
+											<div class="col-4 col-12-xsmall">
+												<select name="demo-name" id="dept">
+													<option value="">Department</option>
+													<option value="1">Sales</option>
+													<option value="2">Reasearch and Development</option>
+													<option value="3">Human Resources</option>
+													</select>
+											</div>
 											<div class="col-4 col-12-xsmall">
 												<select name="demo-name" id="stonks">
 													<option value="">Stock Option Level</option>
@@ -167,6 +150,8 @@
 													<option value="4">4</option>
 													</select>
 											</div>
+
+											<!-- NEW ROW -->
 											<div class="col-4 col-12-xsmall">
 												<select name="demo-name" id="balance">
 													<option value="">Work/Life Balance</option>
@@ -176,8 +161,6 @@
 													<option value="4">4</option>
 													</select>
 											</div>
-
-											<!-- NEW ROW -->
 											<div class="col-4 col-12-xsmall">
 												<select name="demo-name" id="involvement">
 													<option value="">Job Involvement Level</option>
@@ -196,6 +179,8 @@
 													<option value="4">4</option>
 													</select>
 											</div>
+
+											<!-- NEW ROW -->
 											<div class="col-4 col-12-xsmall">
 												<select name="demo-name" id="gender">
 													<option value="">Gender</option>
@@ -203,8 +188,6 @@
 													<option value="1">Male</option>
 													</select>
 											</div>
-
-											<!-- NEW ROW -->
 											<div class="col-4 col-12-xsmall">
 												<select name="demo-name" id="enviro">
 													<option value="">Environment Satisfaction</option>
@@ -217,39 +200,41 @@
 											<div class="col-4 col-12-xsmall">
 												<input type="email" id="age" value="" placeholder="Age" />
 											</div>
+
+											<!-- NEW ROW -->
 											<div class="col-4 col-12-xsmall">
 												<input type="text" id="dist" placeholder="Job Distance From Home (miles)" />
 											</div>
-
-											<!-- NEW ROW -->
 											<div class="col-4 col-12-xsmall">
 												<input type="text" id="income" placeholder="Monthly Income (USD)" />
 											</div>
 											<div class="col-4 col-12-xsmall">
-												<input type="text" id="salhike" placeholder="% Salary Increase This Year" />
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<input type="text" id="stdhrs" placeholder="Hours Worked Per Day" />
+												<input type="text" id="salincrease" placeholder="% Salary Increase This Year" />
 											</div>
 
 											<!-- NEW ROW -->
+											<div class="col-4 col-12-xsmall">
+												<input type="text" id="stdhrs" placeholder="Hours Worked Per Day" />
+											</div>
 											<div class="col-4 col-12-xsmall">
 												<input type="text" id="yearsworked" placeholder="Total Years Worked" />
 											</div>
 											<div class="col-4 col-12-xsmall">
 												<input type="text" id="training" placeholder="# of Trainings Last Year" />
 											</div>
+
+											<!-- NEW ROW -->
 											<div class="col-4 col-12-xsmall">
 												<input type="text" id="atcompany" placeholder="# of Years at Company" />
 											</div>
-
-											<!-- NEW ROW -->
 											<div class="col-4 col-12-xsmall">
 												<input type="text" id="promotion" placeholder="# of Years Since Last Promotion" />
 											</div>
 											<div class="col-4 col-12-xsmall">
 												<input type="text" id="manager" placeholder="# of Years w/ Current Manager" />
 											</div>
+
+											<!-- NEW ROW -->
 											<div class="col-4 col-12-xsmall">
 												<input type="text" id="companies" placeholder="# of Previous Companies" />
 											</div>

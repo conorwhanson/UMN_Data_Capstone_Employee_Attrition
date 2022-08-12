@@ -56,12 +56,111 @@
 
 								<hr />
 									<h4 align="center">Predict Attrition</h4>
-									<h6 align="center">Input parameters below to predict employee attrition</h6>
+									<h6 align="center">Input your parameters below to predict employee attrition</h6>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
 											<div class="col-4 col-12-xsmall">
-												<select name="demo-name" id="env_sat">
-													<option value=""> Age </option>
+												<select name="demo-name" id="role">
+													<option value="">Job Role</option>
+													<option value="1">Healthcare Representative</option>
+													<option value="2">Reasearch Scientist</option>
+													<option value="3">Sales Executive</option>
+													<option value="4">Human Resources</option>
+													<option value="5">Research Director</option>
+													<option value="6">Laboratory Technician</option>
+													<option value="7">Manufacturing Director</option>
+													<option value="8">Sales Representative</option>
+													<option value="9">Manager</option>
+													</select>
+											</div>
+											<div class="col-4 col-12-xsmall">
+												<select name="demo-name" id="travel">
+													<option>Travel For Work?</option>
+													<option>Not at all</option>
+													<option>Rarely</option>
+													<option>Frequently</option>
+													</select>
+											</div>
+											<div class="col-4 col-12-xsmall">
+												<select name="demo-name" id="ed">
+													<option value="">Education Level</option>
+													<option value="1">Below College</option>
+													<option value="2">College</option>
+													<option value="3">Bachelor</option>
+													<option value="4">Master</option>
+													<option value="5">Doctorate</option>
+													</select>
+											</div>
+
+											<!-- NEW ROW -->
+											<div class="col-4 col-12-xsmall">
+												<select name="demo-name" id="edfield">
+													<option value="">Education Field</option>
+													<option value="1">Life Sciences</option>
+													<option value="2">Medical</option>
+													<option value="3">Marketing</option>
+													<option value="4">Technical Degree</option>
+													<option value="5">Human Resources</option>
+													<option value="6">Other</option>
+													</select>
+											</div>
+											<div class="col-4 col-12-small">
+												<select name="demo-name" id="joblevel">
+													<option value="">Job Level at Company</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													</select>
+											</div>
+											<div class="col-4 col-12-small">
+												<select name="demo-name" id="marr">
+													<option value="">Marital Status</option>
+													<option value="1">Married</option>
+													<option value="2">Single</option>
+													<option value="3">Divorced</option>
+													</select>
+											</div>
+											<!-- NEW ROW -->
+											<div class="col-4 col-12-xsmall">
+												<select name="demo-name" id="dept">
+													<option value="">Department</option>
+													<option value="1">Sales</option>
+													<option value="2">Reasearch and Development</option>
+													<option value="3">Human Resources</option>
+													</select>
+											</div>
+											<div class="col-4 col-12-xsmall">
+												<select name="demo-name" id="dept">
+													<option value="">Department</option>
+													<option value="1">Sales</option>
+													<option value="2">Reasearch and Development</option>
+													<option value="3">Human Resources</option>
+													</select>
+											</div>
+											<div class="col-4 col-12-xsmall">
+												<select name="demo-name" id="dept">
+													<option value="">Department</option>
+													<option value="1">Sales</option>
+													<option value="2">Reasearch and Development</option>
+													<option value="3">Human Resources</option>
+													</select>
+											</div>
+
+											<!-- NEW ROW -->
+											<div class="col-4 col-12-xsmall">
+												<select name="demo-name" id="stonks">
+													<option value="">Stock Option Level</option>
+													<option value="0">0</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="2">3</option>
+													</select>
+											</div>
+											<div class="col-4 col-12-xsmall">
+												<select name="demo-name" id="satisfaction">
+													<option value="">Job Satisfaction</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">3</option>
@@ -69,52 +168,92 @@
 													</select>
 											</div>
 											<div class="col-4 col-12-xsmall">
-												<select name="demo-name" id="env_sat">
-													<option value=""> Role </option>
-													<option value="1">HealthCare Representative</option>
-													<option value="2">Manager</option>
-													<option value="3">Human Resources</option>
+												<select name="demo-name" id="balance">
+													<option value="">Work/Life Balance</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													</select>
+											</div>
+
+											<!-- NEW ROW -->
+											<div class="col-4 col-12-xsmall">
+												<select name="demo-name" id="involvement">
+													<option value="">Job Involvement Level</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
 													<option value="4">4</option>
 													</select>
 											</div>
 											<div class="col-4 col-12-xsmall">
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+												<select name="demo-name" id="performance">
+													<option value="">Performance Rating Last Year</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													</select>
 											</div>
 											<div class="col-4 col-12-xsmall">
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+												<select name="demo-name" id="gender">
+													<option value="">Gender</option>
+													<option value="0">Female</option>
+													<option value="1">Male</option>
+													</select>
 											</div>
-											<div class="col-12">
-												<select name="demo-category" id="demo-category">
-													<option value="">- Category -</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
+
+											<!-- NEW ROW -->
+											<div class="col-4 col-12-xsmall">
+												<select name="demo-name" id="enviro">
+													<option value="">Environment Satisfaction</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													</select>
 											</div>
-											<div class="col-4 col-12-small">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
+											<div class="col-4 col-12-xsmall">
+												<input type="email" id="age" value="" placeholder="Age" />
 											</div>
-											<div class="col-4 col-12-small">
-												<input type="radio" id="demo-priority-normal" name="demo-priority">
-												<label for="demo-priority-normal">Normal</label>
+											<div class="col-4 col-12-xsmall">
+												<input type="text" id="dist" placeholder="Job Distance From Home (miles)" />
 											</div>
-											<div class="col-4 col-12-small">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
+
+											<!-- NEW ROW -->
+											<div class="col-4 col-12-xsmall">
+												<input type="text" id="income" placeholder="Monthly Income (USD)" />
 											</div>
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
+											<div class="col-4 col-12-xsmall">
+												<input type="text" id="salhike" placeholder="% Salary Increase This Year" />
 											</div>
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
+											<div class="col-4 col-12-xsmall">
+												<input type="text" id="stdhrs" placeholder="Hours Worked Per Day" />
 											</div>
-											<div class="col-12">
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+
+											<!-- NEW ROW -->
+											<div class="col-4 col-12-xsmall">
+												<input type="text" id="yearsworked" placeholder="Total Years Worked" />
 											</div>
+											<div class="col-4 col-12-xsmall">
+												<input type="text" id="training" placeholder="# of Trainings Last Year" />
+											</div>
+											<div class="col-4 col-12-xsmall">
+												<input type="text" id="atcompany" placeholder="# of Years at Company" />
+											</div>
+
+											<!-- NEW ROW -->
+											<div class="col-4 col-12-xsmall">
+												<input type="text" id="promotion" placeholder="# of Years Since Last Promotion" />
+											</div>
+											<div class="col-4 col-12-xsmall">
+												<input type="text" id="manager" placeholder="# of Years w/ Current Manager" />
+											</div>
+											<div class="col-4 col-12-xsmall">
+												<input type="text" id="companies" placeholder="# of Previous Companies" />
+											</div>
+
 											<div class="col-12">
 												<ul class="actions">
 													<li><input id="predict" type="submit" value="Predict" class="primary" /></li>

@@ -18,31 +18,31 @@ def home():
 @app.route("/prediction")
 def prediction():
     
-    return render_template('/prediction.html')
+    return render_template('prediction.html')
 
 ## app route to data viz
 @app.route("/dataviz")
 def dataviz():
     
-    return render_template('/dataviz.html')
+    return render_template('dataviz.html')
 
 ## define app route to about us page
 @app.route("/aboutus")
 def aboutus():
     
-    return render_template('/aboutus.html')
+    return render_template('aboutus.html')
 
 ## app route to works cited page
 @app.route("/workscited")
 def workscited():
     
-    return render_template('/workscited.html')
+    return render_template('workscited.html')
 
 ## app route to data report page
 @app.route("/datareport")
 def documentation():
     
-    return render_template('/documentation.html')
+    return render_template('documentation.html')
 
 ## Prediction post receiver
 @app.route("/makePredictions")

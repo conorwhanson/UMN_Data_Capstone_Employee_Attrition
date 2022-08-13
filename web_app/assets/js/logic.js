@@ -1,7 +1,8 @@
 $(document).ready(function() {
     console.log("Ready to predict...");
 
-    $("#predict").click(function() {
+    $("#predict").click(function(click) {
+        click.preventDefault();
         makePredictions();
     });
 });
@@ -64,9 +65,14 @@ function makePredictions() {
     }
 
     console.log(payload);
+    if ((payload["Age"] >= 35) && payload["MonthlyIncome"] <= 2000){
+        $("#output").text("You have attritioned. Bye Felicia.");
+    } else {
+        $("#output").text("Your company is ok...for now.");
+
+    }
+
 }
-
-
     // Perform a POST request to the query URL
 //     $.ajax({
 //         type: "POST",

@@ -63,26 +63,30 @@ function makePredictions() {
         "PerformanceRating": performance
     }
 
-    // Perform a POST request to the query URL
-    $.ajax({
-        type: "POST",
-        url: "/makePredictions",
-        contentType: 'application/json;charset=UTF-8',
-        data: JSON.stringify({ "data": payload }),
-        success: function(returnedData) {
-            // print it
-            console.log(returnedData);
-
-            if (returnedData["prediction"] == 1) {
-                $("#output").text("You Survived!");
-            } else {
-                $("#output").text("You Died!");
-            }
-        },
-        error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("Status: " + textStatus);
-            alert("Error: " + errorThrown);
-        }
-    });
-
+    console.log(payload);
 }
+
+
+    // Perform a POST request to the query URL
+//     $.ajax({
+//         type: "POST",
+//         url: "/makePredictions",
+//         contentType: 'application/json;charset=UTF-8',
+//         data: JSON.stringify({ "data": payload }),
+//         success: function(returnedData) {
+//             // print it
+//             console.log(returnedData);
+
+//             if (returnedData["prediction"] == 1) {
+//                 $("#output").text("You have attritioned. By Felicia.");
+//             } else {
+//                 $("#output").text("Your company is ok...for now.");
+//             }
+//         },
+//         error: function(XMLHttpRequest, textStatus, errorThrown) {
+//             alert("Status: " + textStatus);
+//             alert("Error: " + errorThrown);
+//         }
+//     });
+
+// }

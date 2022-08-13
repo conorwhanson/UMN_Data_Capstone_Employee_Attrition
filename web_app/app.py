@@ -2,9 +2,11 @@ from flask import Flask, render_template, redirect, request, jsonify
 import pandas as pd
 import numpy as np
 import os
+from modelHelper import ModelHelper
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+modelHelper = ModelHelper()
 
 ## define app route to root page
 @app.route("/")
@@ -46,9 +48,42 @@ def documentation():
 @app.route("/makePredictions")
 def makePredictions():
     content = request.json['data']
-    print(content)
-    
-    return(jsonify({"ok": True}))
+
+    # Parse the data from the json
+    age = int(content["Age"])
+    travel = str(content["BusinessTravel"])
+    department = str(content["Department"])
+    dist = int(content["DistanceFromHome"])
+    ed = int(content["Education"])
+    edfield = str(content["EducationField"])
+    gender = str(content["Gender"])
+    joblvl = int(content["JobLevel"])
+    role = str(content["JobRole"])
+    marriage = str(content["MaritalStatus"])
+    monthincome = int(content["MonthlyIncome"])
+    numcoworked = int(content["NumCompaniesWorked"])
+    pctsalhike = int(content["PercentSalaryHike"])
+    stdhours = int(content["StandardHours"])
+    stonkopt = int(content["StockOptionLevel"])
+    totalwrkyrs = int(content["TotalWorkingYears"])
+    training = int(content["TrainingTimesLastYear"])
+    yrsatco = int(content["YearsAtCompany"])
+    lastpromo = int(content["YearsSinceLastPromotion"])
+    yearsmanag = int(content["YearsWithCurrManager"])
+    envsat = int(content["EnvironmentSatisfaction"])
+    jobsat = int(content["JobSatisfaction"])
+    worklife = int(content["WorkLifeBalance"])
+    jobinv = int(content["JobInvolvement"])
+    perf = int(content["PerformanceRating"])
+
+
+    prediction = modelHelper.makePredictions(age, travel, department, dist, 
+                                            ed, edfield, gender, joblvl, role, marriage,
+                                            monthincome, numcoworked, pctsalhike, stdhours,
+                                            stonkopt, totalwrkyrs, training, yrsatco, lastpromo,
+                                            yearsmanag, envsat, jobsat, worklife, jobinv, perf)
+    print(prediction)
+    return(jsonify({"ok": True, "prediction": str(prediction)}))
 
 ####################################################################
 @app.after_request

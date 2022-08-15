@@ -7,7 +7,7 @@ $(document).ready(function() {
     });
 });
 
-// call Flask API endpoint
+// Extract and define user inputed values
 function makePredictions() {
     var role = $("#role").val();
     var travel = $("#travel").val();

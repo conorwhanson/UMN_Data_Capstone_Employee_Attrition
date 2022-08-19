@@ -3886,7 +3886,7 @@ input, select, textarea {
 
 	#footer {
 		padding: 6em 0 4em 0 ;
-		background-color: #7F6A93;
+		background-color: #FBAF00;
 		text-align: center;
 	}
 
@@ -3976,7 +3976,7 @@ input, select, textarea {
 	}
 
 	body.landing #footer {
-		background-color: rgba(29, 36, 42, 0.9);
+		background-color: #DCE5E3;
 	}
 
 	body.is-mobile.landing #page-wrapper {

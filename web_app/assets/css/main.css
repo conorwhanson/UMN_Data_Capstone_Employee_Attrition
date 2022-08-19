@@ -233,7 +233,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-bottom: solid 2px #fff;
+		border-bottom: solid 2px #7F6A93;
 		margin: 3em 0;
 	}
 
@@ -3156,7 +3156,7 @@ input, select, textarea {
 			}
 
 			.wrapper.style5 hr {
-				border-color: #dfdfdf;
+				border-color: #3c3e3c;
 			}
 
 			.wrapper.style5 blockquote {

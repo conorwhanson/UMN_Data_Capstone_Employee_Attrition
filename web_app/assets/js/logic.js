@@ -68,7 +68,7 @@ function makePredictions() {
     if ((payload["Age"] >= 35) && payload["MonthlyIncome"] <= 2000){
         $("#output").text("You have attritioned. Bye Felicia.");
     } else {
-        $("#output").text("Your company is ok...for now.");
+        $("#output").text("You and your company are ok...for now.");
 
     }
 

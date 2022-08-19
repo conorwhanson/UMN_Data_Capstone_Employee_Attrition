@@ -86,7 +86,7 @@ function makePredictions() {
 //             if (returnedData["prediction"] == 1) {
 //                 $("#output").text("You have attritioned. By Felicia.");
 //             } else {
-//                 $("#output").text("Your company is ok...for now.");
+//                 $("#output").text("You and your company are ok...for now.");
 //             }
 //         },
 //         error: function(XMLHttpRequest, textStatus, errorThrown) {

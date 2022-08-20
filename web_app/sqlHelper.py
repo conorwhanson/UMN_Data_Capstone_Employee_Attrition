@@ -13,28 +13,45 @@ class SQLHelper():
         # Create an engine that can talk to the database
         self.engine = create_engine(self.conn_string)
 
-    def getDataFromDatabase(self, sex_flag, min_age, max_age):
+    def getDataFromDatabase(self, sex_flag, min_age, max_age, attrition):
 
         query = f"""
                 SELECT
-                    PassengerId,
-                    Survived,
-                    Pclass,
-                    Name,
-                    Sex,
-                    Age,
-                    SibSp,
-                    Parch,
-                    Ticket,
-                    Fare,
-                    Cabin,
-                    Embarked
+                    EmployeeID, 
+                    Age, 
+                    EducationID, 
+                    EducationFieldID,
+                    DistanceFromHome, 
+                    Gender, 
+                    MarriageID, 
+                    NumCompaniesWorked,
+                    TotalWorkingYears, 
+                    LastUpdated, 
+                    EmpWorkTableID, 
+                    EmployeeID,
+                    Attrition, 
+                    BusinessTravelID, 
+                    DepartmentID, 
+                    JobLevel,
+                    JobRoleID, 
+                    MonthlyIncome, 
+                    PercentSalaryHike,  
+                    StandardHours,
+                    StockOptionLevel, 
+                    TrainingTimesLastYear, 
+                    YearsAtCompany,
+                    YearsSinceLastPromotion, 
+                    YearsWithCurrManager, 
+                    LastUpdated
                 FROM
-                    titanic
+                    EmpPersonalInfo pi
+                LEFT JOIN EmpWorkInfo wi ON
+                    pi.EmployeeID = wi.EmployeeID
                 WHERE
                     Age >= {min_age}
                     AND Age <= {max_age}
-                    AND Sex in ({sex_flag});
+                    AND Gender in ({sex_flag})
+                    AND Attrition in ({attrition});
                     """
 
         print(query)

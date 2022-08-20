@@ -8,6 +8,7 @@ from graphHelper import GraphHelper
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 modelHelper = ModelHelper()
+graphHelper = GraphHelper()
 
 ## define app route to root page
 @app.route("/")
@@ -101,7 +102,7 @@ def graph():
     min_age = float(content["min_age"])
     max_age = float(content["max_age"])
 
-    df = GraphHelper.getDataFromDatabase(min_age, max_age)
+    df = graphHelper.getDataFromDatabase(min_age, max_age)
     return(jsonify(json.loads(df.to_json(orient="records"))))
 
 ####################################################################

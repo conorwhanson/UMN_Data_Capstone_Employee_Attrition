@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from sqlalchemy import create_engine, inspect
+from sqlalchemy import create_engine
 
 class GraphHelper():
     def __init__(self):

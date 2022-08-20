@@ -7,35 +7,26 @@ from sqlalchemy import create_engine, inspect
 
 class GraphHelper():
     def __init__(self):
-        self.database_path = "titanic.sqlite"
+        self.database_path = "HR_Attrition.db"
         self.conn_string = f"sqlite:///{self.database_path}"
 
         # Create an engine that can talk to the database
         self.engine = create_engine(self.conn_string)
 
-    def getDataFromDatabase(self, sex_flag, min_age, max_age):
+    def getDataFromDatabase(self, min_age, max_age):
 
         query = f"""
-                SELECT
-                    PassengerId,
-                    Survived,
-                    Pclass,
-                    Name,
-                    Sex,
-                    Age,
-                    SibSp,
-                    Parch,
-                    Ticket,
-                    Fare,
-                    Cabin,
-                    Embarked
-                FROM
-                    titanic
-                WHERE
-                    Age >= {min_age}
-                    AND Age <= {max_age}
-                    AND Sex in ({sex_flag});
-                    """
+        SELECT
+            Age, 
+            Attrition
+        FROM
+            EmpPersonalInfo
+        LEFT JOIN EmpWorkInfo ON
+        EmpPersonalInfo.EmployeeID = EmpWorkInfo.EmployeeID
+        WHERE Age >= {min_age}
+            AND Age <= {max_age}
+            AND Attrition = 'Yes';
+        """
 
         print(query)
 

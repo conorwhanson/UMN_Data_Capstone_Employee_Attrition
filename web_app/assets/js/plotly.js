@@ -10,7 +10,6 @@ $(document).ready(function() {
 
 // call Flask API endpoint
 function graphFromSQL() {
-    var sex_flag = $("#gender").val();
     var min_age = $("#min_age").val();
     var max_age = $("#max_age").val();
 
@@ -19,7 +18,6 @@ function graphFromSQL() {
 
     // create the payload
     var payload = {
-        "sex_flag": sex_flag,
         "min_age": min_age,
         "max_age": max_age
     }
@@ -46,8 +44,7 @@ function graphFromSQL() {
 
 function makeGraph(inp_data) {
     var trace1 = {
-        x: inp_data.filter(x => x.Survived == 0).map(x => x.Age),
-        y: inp_data.filter(x => x.Survived == 0).map(x => x.Fare),
+        x: inp_data.filter(x => x.Attrition == 'Yes').map(x => x.Age),
         mode: 'markers',
         type: 'scatter',
         marker: {
@@ -57,8 +54,7 @@ function makeGraph(inp_data) {
     };
 
     var trace2 = {
-        x: inp_data.filter(x => x.Survived == 1).map(x => x.Age),
-        y: inp_data.filter(x => x.Survived == 1).map(x => x.Fare),
+        x: inp_data.filter(x => x.Attrition == 'Yes').map(x => x.Age),
         mode: 'markers',
         type: 'scatter',
         marker: {

@@ -45,8 +45,14 @@ def documentation():
     
     return render_template('documentation.html')
 
+## define app route to plotly page
+@app.route("/plotly")
+def plotly():
+    
+    return render_template('plotly.html')
+
 ## Prediction post receiver
-@app.route("/makePredictions")
+@app.route("/makePredictions", methods=["POST"])
 def makePredictions():
     content = request.json['data']
 
@@ -87,15 +93,15 @@ def makePredictions():
     return(jsonify({"ok": True, "prediction": str(prediction)}))
 
 @app.route("/graph", methods=["POST"])
-def get_sql():
+def graph():
     content = request.json["data"]
     print(content)
     
     # parse
-    sex_flag = content["sex_flag"]
     min_age = float(content["min_age"])
     max_age = float(content["max_age"])
-    df = GraphHelper.getDataFromDatabase(sex_flag, min_age, max_age)
+
+    df = GraphHelper.getDataFromDatabase(min_age, max_age)
     return(jsonify(json.loads(df.to_json(orient="records"))))
 
 ####################################################################

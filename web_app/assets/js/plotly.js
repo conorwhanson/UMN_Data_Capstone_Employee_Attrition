@@ -60,7 +60,7 @@ function makeGraph(inp_data) {
         mode: 'markers',
         type: 'scatter',
         marker: {
-            "color": "skyblue"
+            "color": "yellow"
         },
         name: "Non-Attrition"
     };

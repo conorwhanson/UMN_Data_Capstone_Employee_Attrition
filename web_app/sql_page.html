@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Explore The Data</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="static/js/sql.js"></script>
+
+</head>
+
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+        <div id="page-wrapper">
+
+            <!-- Header -->
+                <header id="header">
+                    <h1><a href="index.html">Explore</a></h1>
+                    <nav id="nav">
+                        <ul>
+                            <li class="special">
+                                <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                                <div id="menu">
+                                    <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="prediction.html">Prediction Engine</a></li>
+                                        <li><a href="elements.html">The Data</a></li>
+                                        <li><a href="documentation.html">Documentation</a></li>
+                                        <li><a href="aboutus.html">About Us</a></li>
+                                        <li><a href="workscited.html">Works Cited</a></li>
+                                        <li><a href="sql_page.html">Explore the Data</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <article id="main">
+                    <header>
+                        <h2>Explore Our Data</h2>
+                        <p>Go right to the source</p>
+                    </header>
+                    <section class="wrapper style5">
+                        <div class="inner">
+                            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                                <div class="card-header">Filters</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="col-form-label" for="gender">Gender</label>
+                                                <select id="gender">
+                                                    <option value='"male","female"'>All</option>
+                                                    <option value='"female"'>Female</option>
+                                                    <option value='"male"'>Male</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-form-label" for="min_age">Min. Age</label>
+                                                <input type="text" class="form-control" value="25" id="min_age">
+                                                <label class="col-form-label" for="max_age">Max. Age</label>
+                                                <input type="text" class="form-control" value="65" id="max_age">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <button type="button" class="btn btn-primary" id="filter">Query Database!</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="color:lightgray; border-width: 3px;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table id="sql_table" class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>PassengerId</th>
+                                                <th>Survived</th>
+                                                <th>Pclass</th>
+                                                <th>Name</th>
+                                                <th>Gender</th>
+                                                <th>Age</th>
+                                                <th>SibSp</th>
+                                                <th>Parch</th>
+                                                <th>Ticket</th>
+                                                <th>Fare</th>
+                                                <th>Cabin</th>
+                                                <th>Embarked</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+
+				<!-- Footer -->
+                <footer id="footer">
+                    <ul class="icons">
+                        <li><a href="https://github.com/conorwhanson/UMN_Data_Capstone_Employee_Attrition" class="icon brands fa-github-square"></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    </ul>
+                </footer>
+
+        </div>
+
+    <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -45,6 +45,12 @@ def documentation():
     
     return render_template('documentation.html')
 
+## app route to explore data page
+@app.route("/explore")
+def documentation():
+    
+    return render_template('sql_page.html')
+
 ## Prediction post receiver
 @app.route("/makePredictions")
 def makePredictions():

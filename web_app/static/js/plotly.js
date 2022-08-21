@@ -49,7 +49,7 @@ function makeGraph(inp_data) {
         mode: 'markers',
         type: 'bar',
         marker: {
-            "color": "navy"
+            "color": "gold"
         },
         name: "Attritioned"
     };

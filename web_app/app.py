@@ -9,6 +9,7 @@ from sqlHelper import SQLHelper
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 modelHelper = ModelHelper()
+sqlHelper = SQLHelper()
 
 ## define app route to root page
 @app.route("/")
@@ -106,7 +107,7 @@ def get_sql():
     return(jsonify(json.loads(df.to_json(orient="records"))))
 
 @app.route("/getSQL", methods=["POST"])
-def get_sql():
+def get_table():
     content = request.json["data"]
     print(content)
     
@@ -115,7 +116,7 @@ def get_sql():
     min_age = float(content["min_age"])
     max_age = float(content["max_age"])
     attrition = str(content["attrition"])
-    df = SQLHelper.getDataFromDatabase(sex_flag, min_age, max_age)
+    df = sqlHelper.getDataFromDatabase(sex_flag, min_age, max_age, attrition)
     return(jsonify(json.loads(df.to_json(orient="records"))))
 
 ####################################################################
@@ -131,5 +132,5 @@ def add_header(r):
     r.headers["Expires"] = "0"
     return r
 
-if __name__ == "__main_":
+if __name__ == "__main__":
     app.run(debug=True)

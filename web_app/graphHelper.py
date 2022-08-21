@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 
 class GraphHelper():
     def __init__(self):
-        self.database_path = "resources/HR_Data/HR_Attrition.db"
+        self.database_path = "HR_Attrition.db"
         self.conn_string = f"sqlite:///{self.database_path}"
 
         # Create an engine that can talk to the database

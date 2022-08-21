@@ -60,7 +60,7 @@ function makeGraph(inp_data) {
         mode: 'markers',
         type: 'bar',
         marker: {
-            "color": "purple"
+            "color": "lilac"
         },
         name: "Non-Attrition"
     };

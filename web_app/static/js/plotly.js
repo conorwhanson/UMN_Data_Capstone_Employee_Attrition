@@ -44,10 +44,10 @@ function graphFromSQL() {
 
 function makeGraph(inp_data) {
     var trace1 = {
-        x: inp_data.filter(x => x.Attrition == "Yes"),
-        y: inp_data.Age,
+        x: inp_data.filter(x => x.Attrition == "Yes").map(x => x.Attrition),
+        y: inp_data.filter(x => x.Attrition == "Yes").map(x => x.Age),
         mode: 'markers',
-        type: 'scatter',
+        type: 'bar',
         marker: {
             "color": "navy"
         },
@@ -55,10 +55,10 @@ function makeGraph(inp_data) {
     };
 
     var trace2 = {
-        x: inp_data.filter(x => x.Attrition == "No"),
-        y: inp_data.Age,
+        x: inp_data.filter(x => x.Attrition == "No").map(x => x.Attrition),
+        y: inp_data.filter(x => x.Attrition == "No").map(x => x.Age),
         mode: 'markers',
-        type: 'scatter',
+        type: 'bar',
         marker: {
             "color": "purple"
         },
@@ -69,9 +69,9 @@ function makeGraph(inp_data) {
 
     var layout = {
         title: 'Employee Attrition by Age Group',
-        xaxis: { "title": "Age" },
+        xaxis: { "title": "Attritioned or Not" },
         yaxis: { "title": "Count" }
     };
 
-    Plotly.newPlot('scatter', data, layout);
+    Plotly.newPlot('bar', data, layout);
 }

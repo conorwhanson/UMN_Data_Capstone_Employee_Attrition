@@ -53,7 +53,7 @@ def plotly():
     return render_template('plotly.html')
 
 ## Prediction post receiver
-@app.route("/makePredictions", methods=["POST"])
+@app.route("/makePredictions", methods=["GET", "POST"])
 def makePredictions():
     content = request.json['data']
 
@@ -93,7 +93,7 @@ def makePredictions():
     print(prediction)
     return(jsonify({"ok": True, "prediction": str(prediction)}))
 
-@app.route("/graph", methods=["POST"])
+@app.route("/graph", methods=["GET", "POST"])
 def graph():
     content = request.json["data"]
     print(content)

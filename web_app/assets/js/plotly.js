@@ -73,5 +73,5 @@ function makeGraph(inp_data) {
         yaxis: { "title": "Count" }
     };
 
-    Plotly.newPlot('bar', data, layout);
+    Plotly.newPlot('scatter', data, layout);
 }

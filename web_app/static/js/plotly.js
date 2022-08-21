@@ -49,7 +49,7 @@ function makeGraph(inp_data) {
         mode: 'markers',
         type: 'bar',
         marker: {
-            "color": "gold"
+            color: "rgba(134, 96, 142, 1)"
         },
         name: "Attritioned"
     };
@@ -60,7 +60,7 @@ function makeGraph(inp_data) {
         mode: 'markers',
         type: 'bar',
         marker: {
-            "color": "lilac"
+            color: "rgba(251, 175, 0, 1)"
         },
         name: "Non-Attrition"
     };

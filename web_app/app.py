@@ -47,9 +47,15 @@ def documentation():
     
     return render_template('documentation.html')
 
+## define app route to plotly page
+@app.route("/plotly")
+def plotly():
+    
+    return render_template('plotly.html')
+
 ## app route to explore data page
 @app.route("/explore")
-def documentation():
+def sqlPage():
     
     return render_template('sql_page.html')
 
@@ -94,29 +100,29 @@ def makePredictions():
     print(prediction)
     return(jsonify({"ok": True, "prediction": str(prediction)}))
 
-@app.route("/graph", methods=["POST"])
-def get_sql():
-    content = request.json["data"]
-    print(content)
+# @app.route("/graph", methods=["POST"])
+# def get_sql():
+#     content = request.json["data"]
+#     print(content)
     
-    # parse
-    sex_flag = content["sex_flag"]
-    min_age = float(content["min_age"])
-    max_age = float(content["max_age"])
-    df = GraphHelper.getDataFromDatabase(sex_flag, min_age, max_age)
-    return(jsonify(json.loads(df.to_json(orient="records"))))
+#     # parse
+#     sex_flag = content["sex_flag"]
+#     min_age = float(content["min_age"])
+#     max_age = float(content["max_age"])
+#     df = GraphHelper.getDataFromDatabase(sex_flag, min_age, max_age)
+#     return(jsonify(json.loads(df.to_json(orient="records"))))
 
 @app.route("/getSQL", methods=["POST"])
-def get_table():
-    content = request.json["data"]
+def get_sql():
+    content = request.json["data2"]
     print(content)
     
     # parse
     sex_flag = content["sex_flag"]
     min_age = float(content["min_age"])
     max_age = float(content["max_age"])
-    attrition = str(content["attrition"])
-    df = sqlHelper.getDataFromDatabase(sex_flag, min_age, max_age, attrition)
+    # attrition = str(content["attrition"])
+    df = sqlHelper.getDataFromDatabase(sex_flag, min_age, max_age)
     return(jsonify(json.loads(df.to_json(orient="records"))))
 
 ####################################################################

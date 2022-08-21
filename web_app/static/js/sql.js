@@ -13,7 +13,7 @@ function getSQL() {
     var sex_flag = $("#gender").val();
     var min_age = $("#min_age").val();
     var max_age = $("#max_age").val();
-    var attrition = $("#attrition").val()
+    // var attrition = $("#attrition").val()
 
 
     // check if inputs are valid
@@ -22,16 +22,16 @@ function getSQL() {
     var payload = {
         "sex_flag": sex_flag,
         "min_age": min_age,
-        "max_age": max_age,
-        "attrition": attrition
+        "max_age": max_age
+        // "attrition": attrition
     }
 
     // Perform a POST request to the query URL
     $.ajax({
         type: "POST",
         url: "/getSQL",
-        contentType: "application/json;charset=UTF-8}</TD>",
-        data: JSON.stringify({ "data": payload }),
+        contentType: "application/json;charset=UTF-8",
+        data: JSON.stringify({ "data2": payload }),
         success: function(returnedData) {
             // print it
             console.log(returnedData);
@@ -58,32 +58,31 @@ function renderTable(inp_data) {
         html += "<tr>";
 
         // loop through each cell (order matters)
-        HTML += `<td>${ROW.EmployeeID}</TD>`;  
-        HTML += `<TD>${ROW.Age}</TD>`;  
-        HTML += `<TD>${ROW.EducationID}</TD>`;  
-        HTML += `<TD>${ROW.EducationFieldID}</TD>`;
-        HTML += `<TD>${ROW.DistanceFromHome}</TD>`;  
-        HTML += `<TD>${ROW.Gender}</TD>`;  
-        HTML += `<TD>${ROW.MarriageID}</TD>`;  
-        HTML += `<TD>${ROW.NumCompaniesWorked}</TD>`;
-        HTML += `<TD>${ROW.TotalWorkingYears}</TD>`;  
-        HTML += `<TD>${ROW.LastUpdated}</TD>`;  
-        HTML += `<TD>${ROW.EmpWorkTableID}</TD>`;  
-        HTML += `<TD>${ROW.EmployeeID}</TD>`;
-        HTML += `<TD>${ROW.Attrition}</TD>`;  
-        HTML += `<TD>${ROW.BusinessTravelID}</TD>`;  
-        HTML += `<TD>${ROW.DepartmentID}</TD>`;  
-        HTML += `<TD>${ROW.JobLevel}</TD>`;
-        HTML += `<TD>${ROW.JobRoleID}</TD>`;  
-        HTML += `<TD>${ROW.MonthlyIncome}</TD>`; 
-        HTML += `<TD>${ROW.PercentSalaryHike}</TD>`;  
-        HTML += `<TD>${ROW.StandardHours}</TD>`;
-        HTML += `<TD>${ROW.StockOptionLevel}</TD>`;  
-        HTML += `<TD>${ROW.TrainingTimesLastYear}</TD>`;  
-        HTML += `<TD>${ROW.YearsAtCompany}</TD>`;
-        HTML += `<TD>${ROW.YearsSinceLastPromotion}</TD>`;  
-        HTML += `<TD>${ROW.YearsWithCurrManager}</TD>`;  
-        HTML += `<TD>${ROW.LastUpdated}</TD>`;
+        HTML += `<td>${ROW.EmployeeID}</td>`;  
+        HTML += `<td>${ROW.Age}</td>`;  
+        HTML += `<td>${ROW.EducationID}</td>`;  
+        HTML += `<td>${ROW.EducationFieldID}</td>`;
+        HTML += `<td>${ROW.DistanceFromHome}</td>`;  
+        HTML += `<td>${ROW.Gender}</td>`;  
+        HTML += `<td>${ROW.MarriageID}</td>`;  
+        HTML += `<td>${ROW.NumCompaniesWorked}</td>`;
+        HTML += `<td>${ROW.TotalWorkingYears}</td>`;  
+        // HTML += `<td>${ROW.LastUpdated}</td>`; 
+        HTML += `<td>${ROW.EmployeeID}</td>`;
+        HTML += `<td>${ROW.Attrition}</td>`;  
+        HTML += `<td>${ROW.BusinessTravelID}</td>`;  
+        HTML += `<td>${ROW.DepartmentID}</td>`;  
+        HTML += `<td>${ROW.JobLevel}</td>`;
+        HTML += `<td>${ROW.JobRoleID}</td>`;  
+        HTML += `<td>${ROW.MonthlyIncome}</td>`; 
+        HTML += `<td>${ROW.PercentSalaryHike}</td>`;  
+        HTML += `<td>${ROW.StandardHours}</td>`;
+        HTML += `<td>${ROW.StockOptionLevel}</td>`;  
+        HTML += `<td>${ROW.TrainingTimesLastYear}</td>`;  
+        HTML += `<td>${ROW.YearsAtCompany}</td>`;
+        HTML += `<td>${ROW.YearsSinceLastPromotion}</td>`;  
+        HTML += `<td>${ROW.YearsWithCurrManager}</td>`;  
+        // HTML += `<td>${ROW.LastUpdated}</td>`;
 
         // close the row
         html += "</tr>";

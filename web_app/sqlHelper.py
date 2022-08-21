@@ -13,11 +13,11 @@ class SQLHelper():
         # Create an engine that can talk to the database
         self.engine = create_engine(self.conn_string)
 
-    def getDataFromDatabase(self, sex_flag, min_age, max_age, attrition):
+    def getDataFromDatabase(self, sex_flag, min_age, max_age):
 
         query = f"""
                 SELECT
-                    EmployeeID, 
+                    pi.EmployeeID, 
                     Age, 
                     EducationID, 
                     EducationFieldID,
@@ -26,9 +26,7 @@ class SQLHelper():
                     MarriageID, 
                     NumCompaniesWorked,
                     TotalWorkingYears, 
-                    LastUpdated, 
                     EmpWorkTableID, 
-                    EmployeeID,
                     Attrition, 
                     BusinessTravelID, 
                     DepartmentID, 
@@ -41,8 +39,7 @@ class SQLHelper():
                     TrainingTimesLastYear, 
                     YearsAtCompany,
                     YearsSinceLastPromotion, 
-                    YearsWithCurrManager, 
-                    LastUpdated
+                    YearsWithCurrManager
                 FROM
                     EmpPersonalInfo pi
                 LEFT JOIN EmpWorkInfo wi ON
@@ -50,8 +47,7 @@ class SQLHelper():
                 WHERE
                     Age >= {min_age}
                     AND Age <= {max_age}
-                    AND Gender in ({sex_flag})
-                    AND Attrition in ({attrition});
+                    AND Gender in ({sex_flag});
                     """
 
         print(query)

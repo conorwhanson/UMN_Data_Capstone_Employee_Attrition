@@ -7,7 +7,7 @@ from sqlalchemy import create_engine, inspect
 
 class SQLHelper():
     def __init__(self):
-        self.database_path = "titanic.sqlite"
+        self.database_path = "HR_Attrition.db"
         self.conn_string = f"sqlite:///{self.database_path}"
 
         # Create an engine that can talk to the database

@@ -4,6 +4,7 @@ import numpy as np
 import json
 from modelHelper import ModelHelper
 from graphHelper import GraphHelper
+from sqlHelper import SQLHelper
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
@@ -114,7 +115,7 @@ def get_sql():
     min_age = float(content["min_age"])
     max_age = float(content["max_age"])
     attrition = str(content["attrition"])
-    df = sqlHelper.getDataFromDatabase(sex_flag, min_age, max_age)
+    df = SQLHelper.getDataFromDatabase(sex_flag, min_age, max_age)
     return(jsonify(json.loads(df.to_json(orient="records"))))
 
 ####################################################################

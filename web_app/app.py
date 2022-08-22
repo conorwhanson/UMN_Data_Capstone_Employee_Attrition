@@ -114,7 +114,7 @@ def get_graph():
     return(jsonify(json.loads(df.to_json(orient="records"))))
 
 @app.route("/getSQL", methods=["POST"])
-def get_sql():
+def get_table():
     content = request.json["data2"]
     print(content)
     

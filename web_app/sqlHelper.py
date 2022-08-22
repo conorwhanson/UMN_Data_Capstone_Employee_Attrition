@@ -16,8 +16,8 @@ class SQLHelper():
     def getDataFromDb(self, sex_flag, min_age, max_age, attrition):
 
         query = f"""
-                SELECT
-                    pi.EmployeeID, 
+                SELECT 
+                    Attrition,
                     Age, 
                     EducationID, 
                     EducationFieldID,
@@ -25,8 +25,7 @@ class SQLHelper():
                     Gender, 
                     MarriageID, 
                     NumCompaniesWorked,
-                    TotalWorkingYears,
-                    Attrition, 
+                    TotalWorkingYears,                    
                     BusinessTravelID, 
                     DepartmentID, 
                     JobLevel,

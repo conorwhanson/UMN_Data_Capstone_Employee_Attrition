@@ -51,14 +51,14 @@ function renderTable(inp_data) {
     let html = "";
 
     // destroy datatable
-    $('#sql_table').DataTable({scrollX: true}).clear().destroy();
+    $('#sql_table').DataTable().clear().destroy();
 
     // loop through all rows
     inp_data.forEach(function(row) {
         html += "<tr>";
 
         // loop through each cell (order matters)
-        html += `<td>${row.EmployeeID}</td>`;  
+        html += `<td>${row.Attrition}</td>`;  
         html += `<td>${row.Age}</td>`;  
         html += `<td>${row.EducationID}</td>`;  
         html += `<td>${row.EducationFieldID}</td>`;
@@ -69,7 +69,6 @@ function renderTable(inp_data) {
         html += `<td>${row.TotalWorkingYears}</td>`;  
         // html += `<td>${row.LastUpdated}</td>`; 
         // html += `<td>${row.EmployeeID}</td>`;
-        html += `<td>${row.Attrition}</td>`;  
         html += `<td>${row.BusinessTravelID}</td>`;  
         html += `<td>${row.DepartmentID}</td>`;  
         html += `<td>${row.JobLevel}</td>`;

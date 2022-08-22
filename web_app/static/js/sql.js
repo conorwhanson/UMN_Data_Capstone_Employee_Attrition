@@ -13,7 +13,7 @@ function getSQL() {
     var sex_flag = $("#gender").val();
     var min_age = $("#min_age").val();
     var max_age = $("#max_age").val();
-    // var attrition = $("#attrition").val()
+    var attrition = $("#attrition").val()
 
 
     // check if inputs are valid
@@ -22,8 +22,8 @@ function getSQL() {
     var payload = {
         "sex_flag": sex_flag,
         "min_age": min_age,
-        "max_age": max_age
-        // "attrition": attrition
+        "max_age": max_age,
+        "attrition": attrition
     }
 
     // Perform a POST request to the query URL

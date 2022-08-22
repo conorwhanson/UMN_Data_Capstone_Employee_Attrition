@@ -13,7 +13,7 @@ class SQLHelper():
         # Create an engine that can talk to the database
         self.engine = create_engine(self.conn_string)
 
-    def getDataFromDatabase(self, sex_flag, min_age, max_age):
+    def getDataFromDb(self, sex_flag, min_age, max_age, attrition):
 
         query = f"""
                 SELECT
@@ -46,7 +46,8 @@ class SQLHelper():
                 WHERE
                     Age >= {min_age}
                     AND Age <= {max_age}
-                    AND Gender in ({sex_flag});
+                    AND Gender in ({sex_flag})
+                    AND Attrition in ({attrition});
                     """
 
         print(query)

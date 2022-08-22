@@ -122,8 +122,8 @@ def get_sql():
     sex_flag = content["sex_flag"]
     min_age = float(content["min_age"])
     max_age = float(content["max_age"])
-    # attrition = str(content["attrition"])
-    df = sqlHelper.getDataFromDatabase(sex_flag, min_age, max_age)
+    attrition = str(content["attrition"])
+    df = sqlHelper.getDataFromDb(sex_flag, min_age, max_age, attrition)
     return(jsonify(json.loads(df.to_json(orient="records"))))
 
 ####################################################################

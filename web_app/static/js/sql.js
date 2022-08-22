@@ -94,5 +94,7 @@ function renderTable(inp_data) {
     $("#sql_table tbody").append(html);
 
     // remake data table
-    $('#sql_table').DataTable();
+    $('#sql_table').DataTable({
+        scrollX: true,
+    });
 }

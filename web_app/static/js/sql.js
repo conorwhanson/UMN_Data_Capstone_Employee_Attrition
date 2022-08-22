@@ -51,7 +51,7 @@ function renderTable(inp_data) {
     let html = "";
 
     // destroy datatable
-    $('#sql_table').DataTable().clear().destroy();
+    $('#sql_table').DataTable({scrollX: true}).clear().destroy();
 
     // loop through all rows
     inp_data.forEach(function(row) {

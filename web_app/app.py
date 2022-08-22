@@ -111,7 +111,7 @@ def graph():
     # parse
     min_age = float(content["min_age"])
     max_age = float(content["max_age"])
-    df = graphHelper.getDataFromDatabase(sex_flag, min_age, max_age)
+    df = graphHelper.getDataFromDatabase(min_age, max_age)
     return(jsonify(json.loads(df.to_json(orient="records"))))
 
 @app.route("/getSQL", methods=["POST"])

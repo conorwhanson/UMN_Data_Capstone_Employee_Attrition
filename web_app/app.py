@@ -4,10 +4,13 @@ import numpy as np
 import json
 from modelHelper import ModelHelper
 from graphHelper import GraphHelper
+from sqlHelper import SQLHelper
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 modelHelper = ModelHelper()
+
+sqlHelper = SQLHelper()
 graphHelper = GraphHelper()
 
 ## define app route to root page
@@ -51,6 +54,13 @@ def documentation():
 def plotly():
     
     return render_template('plotly.html')
+
+
+## app route to explore data page
+@app.route("/explore")
+def sqlPage():
+    
+    return render_template('sql_page.html')
 
 ## Prediction post receiver
 @app.route("/makePredictions", methods=["POST"])
@@ -101,8 +111,20 @@ def graph():
     # parse
     min_age = float(content["min_age"])
     max_age = float(content["max_age"])
+    df = graphHelper.getDataFromDatabase(sex_flag, min_age, max_age)
+    return(jsonify(json.loads(df.to_json(orient="records"))))
 
-    df = graphHelper.getDataFromDatabase(min_age, max_age)
+@app.route("/getSQL", methods=["POST"])
+def get_table():
+    content = request.json["data2"]
+    print(content)
+    
+    # parse
+    sex_flag = content["sex_flag"]
+    min_age = float(content["min_age"])
+    max_age = float(content["max_age"])
+    attrition = str(content["attrition"])
+    df = sqlHelper.getDataFromDb(sex_flag, min_age, max_age, attrition)
     return(jsonify(json.loads(df.to_json(orient="records"))))
 
 ####################################################################

@@ -1,6 +1,7 @@
 $(document).ready(function() {
     console.log("Ready to graph");
 
+
     $("#plot").click(function() {
         // alert("button clicked!");
         graphFromSQL();

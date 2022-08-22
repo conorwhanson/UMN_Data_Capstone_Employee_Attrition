@@ -9,6 +9,7 @@ from sqlHelper import SQLHelper
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 modelHelper = ModelHelper()
+
 sqlHelper = SQLHelper()
 graphHelper = GraphHelper()
 
@@ -54,6 +55,7 @@ def plotly():
     
     return render_template('plotly.html')
 
+
 ## app route to explore data page
 @app.route("/explore")
 def sqlPage():
@@ -61,7 +63,7 @@ def sqlPage():
     return render_template('sql_page.html')
 
 ## Prediction post receiver
-@app.route("/makePredictions")
+@app.route("/makePredictions", methods=["POST"])
 def makePredictions():
     content = request.json['data']
 
@@ -102,12 +104,11 @@ def makePredictions():
     return(jsonify({"ok": True, "prediction": str(prediction)}))
 
 @app.route("/graph", methods=["POST"])
-def get_graph():
+def graph():
     content = request.json["data"]
     print(content)
     
     # parse
-    sex_flag = content["sex_flag"]
     min_age = float(content["min_age"])
     max_age = float(content["max_age"])
     df = graphHelper.getDataFromDatabase(sex_flag, min_age, max_age)

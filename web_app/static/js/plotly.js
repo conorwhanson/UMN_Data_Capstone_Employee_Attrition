@@ -1,7 +1,8 @@
 $(document).ready(function() {
     console.log("Ready to graph");
 
-    $("#graph").click(function() {
+
+    $("#plot").click(function() {
         // alert("button clicked!");
         graphFromSQL();
     });
@@ -44,31 +45,34 @@ function graphFromSQL() {
 
 function makeGraph(inp_data) {
     var trace1 = {
-        x: inp_data.filter(x => x.Attrition == 'Yes').map(x => x.Age),
+        x: inp_data.filter(x => x.Attrition == "Yes").map(x => x.Attrition),
+        y: inp_data.filter(x => x.Attrition == "Yes").map(x => x.Age),
         mode: 'markers',
-        type: 'scatter',
+        type: 'bar',
         marker: {
-            "color": "FrenchLilac"
+            color: "rgba(134, 96, 142, 1)"
         },
-        name: "Died"
+        name: "Attritioned"
     };
 
     var trace2 = {
-        x: inp_data.filter(x => x.Attrition == 'Yes').map(x => x.Age),
+        x: inp_data.filter(x => x.Attrition == "No").map(x => x.Attrition),
+        y: inp_data.filter(x => x.Attrition == "No").map(x => x.Age),
         mode: 'markers',
-        type: 'scatter',
+        type: 'bar',
         marker: {
-            "color": "HoneyYellow"
+            color: "rgba(251, 175, 0, 1)"
         },
-        name: "Survived"
+        name: "Non-Attrition"
     };
 
     var data = [trace1, trace2];
+
     var layout = {
-        title: 'Titanic Age vs Fare for Filter',
-        xaxis: { "title": "Age" },
-        yaxis: { "title": "Fare" }
+        title: 'Employee Attrition by Age Group',
+        xaxis: { "title": "Attritioned or Not" },
+        yaxis: { "title": "Count" }
     };
 
-    Plotly.newPlot('scatter', data, layout);
+    Plotly.newPlot('bar', data, layout);
 }

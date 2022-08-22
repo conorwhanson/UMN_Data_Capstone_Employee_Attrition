@@ -2331,6 +2331,7 @@ input, select, textarea {
 
 /* Table */
 
+
 div.dataTables_wrapper {
 	width: 95%;
 	margin: 1 auto;
@@ -2359,6 +2360,7 @@ th, td { white-space: nowrap; }
 
 		table tbody tr {
 			border: solid 1px rgb(8, 8, 8);
+
 			border-left: 0;
 			border-right: 0;
 		}
@@ -2372,7 +2374,9 @@ th, td { white-space: nowrap; }
 		}
 
 		table th {
+<
 			color: rgb(3, 3, 3);
+
 			font-size: 0.9em;
 			font-weight: 600;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -2381,6 +2385,7 @@ th, td { white-space: nowrap; }
 
 		table thead {
 			border-bottom: solid 2px rgb(12, 11, 11);
+
 		}
 
 		table tfoot {

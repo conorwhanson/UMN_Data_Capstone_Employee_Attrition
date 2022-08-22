@@ -29,12 +29,12 @@
 									<div id="menu">
 										<ul>
 											<li><a href="/">Home</a></li>
-                      						<li><a href="/prediction">Prediction Engine</a></li>
-                                            <li><a href="/dataviz">The Data</a></li>
-                                            <li><a href="/plotly">Plotly</a></li>
-                                            <li><a href="/datareport">Documentation</a></li>
-                                            <li><a href="/aboutus">About Us</a></li>
-                                            <li><a href="/workscited">Works Cited</a></li>
+                      <li><a href="/prediction">Prediction Engine</a></li>
+                      <li><a href="/dataviz">The Data</a></li>
+                      <li><a href="/plotly">Plotly</a></li>
+                      <li><a href="/datareport">Documentation</a></li>
+                      <li><a href="/aboutus">About Us</a></li>
+                      <li><a href="/workscited">Works Cited</a></li>
 											<li><a href="/explore">Explore the Data</a></li>
 										</ul>
 									</div>
@@ -46,228 +46,29 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>The Data Visualized</h2>
-							<p>See the data dashboard below for helpful<br />
-								visualizations of employee attrition</p>
+							<h2>Attrition by Age</h2>
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
-
-									<h4 align="center">Select Data Parameters Below to Graph</h4>
-									<h6 align="center">Input your parameters below to see scatter plots of some data relationships. The data is queried from the SQLite database and displayed below.</h6>
-									<hr style="color:#3C3E3C; border-width: 3px;">
-									<form method="post" action="#">
-										<div class="row gtr-uniform">
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Job Role</label>
-												<select name="jobrole" id="role">
-													<option>Healthcare Representative</option>
-													<option>Reasearch Scientist</option>
-													<option>Sales Executive</option>
-													<option>Human Resources</option>
-													<option>Research Director</option>
-													<option>Laboratory Technician</option>
-													<option>Manufacturing Director</option>
-													<option>Sales Representative</option>
-													<option>Manager</option>
-													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Travel For Work?</label>
-												<select name="doyoutravel" id="travel">
-													<option value="Non-Travel">Not at all</option>
-													<option value="Travel_Rarely">Rarely</option>
-													<option value="Travel_Frequently">Frequently</option>
-													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Education Level</label>
-												<select name="yousmart" id="ed" placeholder="Bachelor">
-													<option>Below College</option>
-													<option>College</option>
-													<option>Bachelor</option>
-													<option>Master</option>
-													<option>Doctorate</option>
-													</select>
-											</div>
-
-											<!-- NEW ROW -->
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Education Field</label>
-												<select name="smartfield" id="edfield">
-													<option>Life Sciences</option>
-													<option>Medical</option>
-													<option>Marketing</option>
-													<option>Technical Degree</option>
-													<option>Human Resources</option>
-													<option>Other</option>
-													</select>
-											</div>
-											<div class="col-4 col-12-small">
-												<label class="col-form-label">Job Level at Company</label>
-												<select name="bosslevel" id="joblevel">
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-													</select>
-											</div>
-											<div class="col-4 col-12-small">
-												<label class="col-form-label">Marital Status</label>
-												<select name="ringonit" id="marr">
-													<option>Married</option>
-													<option>Single</option>
-													<option>Divorced</option>
-													</select>
-											</div>
-
-											<!-- NEW ROW -->
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Department</label>
-												<select name="jobloc" id="dept">
-													<option>Sales</option>
-													<option>Reasearch and Development</option>
-													<option>Human Resources</option>
-													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Stock Option Level</label>
-												<select name="gotstonks" id="stonks">
-													<option>0</option>
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Job Satisfaction</label>
-												<select name="likejob" id="satisfaction">
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													</select>
-											</div>
-
-											<!-- NEW ROW -->
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Work/Life Balance</label>
-												<select name="equilibrium" id="balance">
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Job Involvement Level</label>
-												<select name="hardworkin" id="involvement">
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Performance Rating Last Year</label>
-												<select name="boss-applause" id="performance">
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													</select>
-											</div>
-
-											<!-- NEW ROW -->
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Gender</label>
-												<select name="whoyouis" id="gender">
-													<option>Female</option>
-													<option>Male</option>
-													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Environment Satisfaction</label>
-												<select name="placegoodorno" id="enviro">
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Age</label>
-												<input type="text" id="age" value="37" />
-											</div>
-
-											<!-- NEW ROW -->
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Job Distance From Home (miles)</label>
-												<input type="text" id="dist" value="5" />
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Monthly Income (USD)</label>
-												<input type="text" id="income" value="1500" />
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">% Salary Increase This Year</label>
-												<input type="text" id="salincrease" value="5" />
-											</div>
-
-											
-											<!-- <div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Hours Worked Per Day</label>
-												<input type="text" id="stdhrs" value="8" />
-											</div> -->
-
-											<!-- NEW ROW -->
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Total Years Worked</label>
-												<input type="text" id="yearsworked" value="5" />
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label"># of Trainings Last Year</label>
-												<input type="text" id="training" value="1" />
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label"># of Years at Company</label>
-												<input type="text" id="atcompany" value="5" />
-											</div>
-
-											<!-- NEW ROW -->
-											
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label"># of Years Since Last Promotion</label>
-												<input type="text" id="promotion" value="2" />
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label"># of Years w/ Current Manager</label>
-												<input type="text" id="manager" value="2" />
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label"># of Previous Companies</label>
-												<input type="text" id="companies" value="1" />
-											</div>
-
-											<div class="col-12">
-												<ul class="actions">
-													<li><input id="graph" type="submit" value="Graph" class="primary" /></li>
-													<!-- <li><input type="reset" value="Reset" /></li> -->
-												</ul>
-											</div>
+								<h4 align="center">Input an age range below to see attrition numbers by age group. The data is queried from the SQLite database and displayed below.</h4>
+									<div class="row gtr-uniform">
+										<div class="col-4 col-12-xsmall">
+											<label class="col-form-label">Minimum Age</label>
+											<input type="text" id="min_age" value="18" />
 										</div>
-									</form>
-									<hr style="color:#3C3E3C; border-width: 3px;">
-									<div class="container-fluid">
-										<div class="row">
+										<div class="col-4 col-12-xsmall">
+											<label class="col-form-label">Maximum Age</label>
+											<input type="text" id="max_age" value="21" />
+										</div>
+										<div class="col-12">
+											<ul class="actions">
+												<li><input id="plot" type="submit" value="Plot" class="primary" /></li>
+										</div>
 											<div class="col-md-12">
-												<div id="scatter"></div>
+												<div id="bar"></div>
 											</div>
-										</div>
 									</div>
 							</div>
-						
 						</section>
 					</article>
 
@@ -292,7 +93,6 @@
 			<script src="static/js/util.js"></script>
 			<script src="static/js/main.js"></script>
 			<script src="static/js/plotly.js"></script>
-
 
 	</body>
 </html>

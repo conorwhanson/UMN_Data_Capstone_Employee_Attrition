@@ -1,9 +1,6 @@
 import pandas as pd
-import datetime
-import time
-import pickle
 import numpy as np
-from sqlalchemy import create_engine, inspect
+from sqlalchemy import create_engine
 
 class GraphHelper():
     def __init__(self):
@@ -24,8 +21,7 @@ class GraphHelper():
         LEFT JOIN EmpWorkInfo ON
         EmpPersonalInfo.EmployeeID = EmpWorkInfo.EmployeeID
         WHERE Age >= {min_age}
-            AND Age <= {max_age}
-            AND Attrition = 'Yes';
+            AND Age <= {max_age};
         """
 
         print(query)

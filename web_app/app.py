@@ -10,6 +10,7 @@ app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 modelHelper = ModelHelper()
 sqlHelper = SQLHelper()
+graphHelper = GraphHelper()
 
 ## define app route to root page
 @app.route("/")
@@ -100,17 +101,17 @@ def makePredictions():
     print(prediction)
     return(jsonify({"ok": True, "prediction": str(prediction)}))
 
-# @app.route("/graph", methods=["POST"])
-# def get_sql():
-#     content = request.json["data"]
-#     print(content)
+@app.route("/graph", methods=["POST"])
+def get_graph():
+    content = request.json["data"]
+    print(content)
     
-#     # parse
-#     sex_flag = content["sex_flag"]
-#     min_age = float(content["min_age"])
-#     max_age = float(content["max_age"])
-#     df = GraphHelper.getDataFromDatabase(sex_flag, min_age, max_age)
-#     return(jsonify(json.loads(df.to_json(orient="records"))))
+    # parse
+    sex_flag = content["sex_flag"]
+    min_age = float(content["min_age"])
+    max_age = float(content["max_age"])
+    df = graphHelper.getDataFromDatabase(sex_flag, min_age, max_age)
+    return(jsonify(json.loads(df.to_json(orient="records"))))
 
 @app.route("/getSQL", methods=["POST"])
 def get_sql():

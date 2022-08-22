@@ -58,31 +58,31 @@ function renderTable(inp_data) {
         html += "<tr>";
 
         // loop through each cell (order matters)
-        HTML += `<td>${ROW.EmployeeID}</td>`;  
-        HTML += `<td>${ROW.Age}</td>`;  
-        HTML += `<td>${ROW.EducationID}</td>`;  
-        HTML += `<td>${ROW.EducationFieldID}</td>`;
-        HTML += `<td>${ROW.DistanceFromHome}</td>`;  
-        HTML += `<td>${ROW.Gender}</td>`;  
-        HTML += `<td>${ROW.MarriageID}</td>`;  
-        HTML += `<td>${ROW.NumCompaniesWorked}</td>`;
-        HTML += `<td>${ROW.TotalWorkingYears}</td>`;  
-        // HTML += `<td>${ROW.LastUpdated}</td>`; 
-        HTML += `<td>${ROW.EmployeeID}</td>`;
-        HTML += `<td>${ROW.Attrition}</td>`;  
-        HTML += `<td>${ROW.BusinessTravelID}</td>`;  
-        HTML += `<td>${ROW.DepartmentID}</td>`;  
-        HTML += `<td>${ROW.JobLevel}</td>`;
-        HTML += `<td>${ROW.JobRoleID}</td>`;  
-        HTML += `<td>${ROW.MonthlyIncome}</td>`; 
-        HTML += `<td>${ROW.PercentSalaryHike}</td>`;  
-        HTML += `<td>${ROW.StandardHours}</td>`;
-        HTML += `<td>${ROW.StockOptionLevel}</td>`;  
-        HTML += `<td>${ROW.TrainingTimesLastYear}</td>`;  
-        HTML += `<td>${ROW.YearsAtCompany}</td>`;
-        HTML += `<td>${ROW.YearsSinceLastPromotion}</td>`;  
-        HTML += `<td>${ROW.YearsWithCurrManager}</td>`;  
-        // HTML += `<td>${ROW.LastUpdated}</td>`;
+        html += `<td>${row.EmployeeID}</td>`;  
+        html += `<td>${row.Age}</td>`;  
+        html += `<td>${row.EducationID}</td>`;  
+        html += `<td>${row.EducationFieldID}</td>`;
+        html += `<td>${row.DistanceFromHome}</td>`;  
+        html += `<td>${row.Gender}</td>`;  
+        html += `<td>${row.MarriageID}</td>`;  
+        html += `<td>${row.NumCompaniesWorked}</td>`;
+        html += `<td>${row.TotalWorkingYears}</td>`;  
+        // html += `<td>${row.LastUpdated}</td>`; 
+        // html += `<td>${row.EmployeeID}</td>`;
+        html += `<td>${row.Attrition}</td>`;  
+        html += `<td>${row.BusinessTravelID}</td>`;  
+        html += `<td>${row.DepartmentID}</td>`;  
+        html += `<td>${row.JobLevel}</td>`;
+        html += `<td>${row.JobRoleID}</td>`;  
+        html += `<td>${row.MonthlyIncome}</td>`; 
+        html += `<td>${row.PercentSalaryHike}</td>`;  
+        html += `<td>${row.StandardHours}</td>`;
+        html += `<td>${row.StockOptionLevel}</td>`;  
+        html += `<td>${row.TrainingTimesLastYear}</td>`;  
+        html += `<td>${row.YearsAtCompany}</td>`;
+        html += `<td>${row.YearsSinceLastPromotion}</td>`;  
+        html += `<td>${row.YearsWithCurrManager}</td>`;  
+        // html += `<td>${row.LastUpdated}</td>`;
 
         // close the row
         html += "</tr>";

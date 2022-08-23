@@ -7,6 +7,14 @@ $(document).ready(function() {
     });
 });
 
+$('#sql_table').DataTable({
+    //table settings
+    initComplete : function() {
+       if ($(this).find('tbody tr').length<=1) {
+          $('#sql_table').parents('div.dataTables_wrapper').first().hide();
+       }
+    } 
+ });
 
 // call Flask API endpoint
 function getSQL() {
@@ -94,6 +102,6 @@ function renderTable(inp_data) {
 
     // remake data table
     $('#sql_table').DataTable({
-        scrollX: true,
+        scrollX: true
     });
 }

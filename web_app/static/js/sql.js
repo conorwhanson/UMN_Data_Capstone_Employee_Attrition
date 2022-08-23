@@ -102,6 +102,8 @@ function renderTable(inp_data) {
 
     // remake data table
     $('#sql_table').DataTable({
-        scrollX: true
+        scrollX: true,
+        scrollY: true,
+        fixedHeader: true
     });
 }

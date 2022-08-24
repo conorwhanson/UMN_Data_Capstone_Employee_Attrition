@@ -69,37 +69,19 @@ def makePredictions():
 
     # Parse the data from the json
     age = int(content["Age"])
-    travel = str(content["BusinessTravel"])
-    department = str(content["Department"])
-    dist = int(content["DistanceFromHome"])
-    ed = int(content["Education"])
-    edfield = str(content["EducationField"])
-    gender = str(content["Gender"])
-    joblvl = int(content["JobLevel"])
-    role = str(content["JobRole"])
-    marriage = str(content["MaritalStatus"])
-    monthincome = int(content["MonthlyIncome"])
-    numcoworked = int(content["NumCompaniesWorked"])
+    dist = float(content["DistanceFromHome"])
+    monthincome = float(content["MonthlyIncome"])
+    numcoworked = float(content["NumCompaniesWorked"])
     pctsalhike = int(content["PercentSalaryHike"])
-    stdhours = int(content["StandardHours"])
-    stonkopt = int(content["StockOptionLevel"])
-    totalwrkyrs = int(content["TotalWorkingYears"])
-    training = int(content["TrainingTimesLastYear"])
+    totalwrkyrs = float(content["TotalWorkingYears"])
     yrsatco = int(content["YearsAtCompany"])
-    lastpromo = int(content["YearsSinceLastPromotion"])
     yearsmanag = int(content["YearsWithCurrManager"])
-    envsat = int(content["EnvironmentSatisfaction"])
-    jobsat = int(content["JobSatisfaction"])
-    worklife = int(content["WorkLifeBalance"])
-    jobinv = int(content["JobInvolvement"])
-    perf = int(content["PerformanceRating"])
+    envsat = float(content["EnvironmentSatisfaction"])
+    jobsat = float(content["JobSatisfaction"])
 
-
-    prediction = modelHelper.makePredictions(age, travel, department, dist, 
-                                            ed, edfield, gender, joblvl, role, marriage,
-                                            monthincome, numcoworked, pctsalhike, stdhours,
-                                            stonkopt, totalwrkyrs, training, yrsatco, lastpromo,
-                                            yearsmanag, envsat, jobsat, worklife, jobinv, perf)
+    prediction = modelHelper.makePredictions(age, dist, monthincome, numcoworked, 
+                                            pctsalhike, totalwrkyrs, yrsatco, yearsmanag,
+                                            envsat, jobsat)
     print(prediction)
     return(jsonify({"ok": True, "prediction": str(prediction)}))
 

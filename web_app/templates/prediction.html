@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Spectral by HTML5 UP</title>
+		<title>Attrition Prediction</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="static/css/main.css" />
@@ -61,7 +61,7 @@
 									<h6 align="center">Input your parameters below to predict employee attrition</h6>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
-											<div class="col-4 col-12-xsmall">
+											<!-- <div class="col-4 col-12-xsmall">
 												<label class="col-form-label">Job Role</label>
 												<select name="jobrole" id="role">
 													<option>Healthcare Representative</option>
@@ -74,16 +74,16 @@
 													<option>Sales Representative</option>
 													<option>Manager</option>
 													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
+											</div> -->
+											<!-- <div class="col-4 col-12-xsmall">
 												<label class="col-form-label">Travel For Work?</label>
 												<select name="doyoutravel" id="travel">
 													<option value="Non-Travel">Not at all</option>
 													<option value="Travel_Rarely">Rarely</option>
 													<option value="Travel_Frequently">Frequently</option>
 													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
+											</div> -->
+											<!-- <div class="col-4 col-12-xsmall">
 												<label class="col-form-label">Education Level</label>
 												<select name="yousmart" id="ed" placeholder="Bachelor">
 													<option>Below College</option>
@@ -92,10 +92,10 @@
 													<option>Master</option>
 													<option>Doctorate</option>
 													</select>
-											</div>
+											</div> -->
 
 											<!-- NEW ROW -->
-											<div class="col-4 col-12-xsmall">
+											<!-- <div class="col-4 col-12-xsmall">
 												<label class="col-form-label">Education Field</label>
 												<select name="smartfield" id="edfield">
 													<option>Life Sciences</option>
@@ -105,8 +105,8 @@
 													<option>Human Resources</option>
 													<option>Other</option>
 													</select>
-											</div>
-											<div class="col-4 col-12-small">
+											</div> -->
+											<!-- <div class="col-4 col-12-small">
 												<label class="col-form-label">Job Level at Company</label>
 												<select name="bosslevel" id="joblevel">
 													<option>1</option>
@@ -115,32 +115,75 @@
 													<option>4</option>
 													<option>5</option>
 													</select>
-											</div>
-											<div class="col-4 col-12-small">
+											</div> -->
+											<!-- <div class="col-4 col-12-small">
 												<label class="col-form-label">Marital Status</label>
 												<select name="ringonit" id="marr">
 													<option>Married</option>
 													<option>Single</option>
 													<option>Divorced</option>
 													</select>
-											</div>
+											</div> -->
 
 											<!-- NEW ROW -->
-											<div class="col-4 col-12-xsmall">
+											<!-- <div class="col-4 col-12-xsmall">
 												<label class="col-form-label">Department</label>
 												<select name="jobloc" id="dept">
 													<option>Sales</option>
 													<option>Reasearch and Development</option>
 													<option>Human Resources</option>
 													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
+											</div> -->
+											<!-- <div class="col-4 col-12-xsmall">
 												<label class="col-form-label">Stock Option Level</label>
 												<select name="gotstonks" id="stonks">
 													<option>0</option>
 													<option>1</option>
 													<option>2</option>
 													<option>3</option>
+													</select>
+											</div> -->
+											<div class="col-4 col-12-xsmall">
+												<label class="col-form-label">Age</label>
+												<input type="text" id="age" value="37" />
+											</div>
+											<div class="col-4 col-12-xsmall">
+												<label class="col-form-label">Monthly Income (USD)</label>
+												<input type="text" id="income" value="1500" />
+											</div>
+											<div class="col-4 col-12-xsmall">
+												<label class="col-form-label">% Salary Increase This Year</label>
+												<input type="text" id="salincrease" value="5" />
+											</div>
+											
+
+											<!-- NEW ROW -->
+											<div class="col-4 col-12-xsmall">
+												<label class="col-form-label">Total Years Worked</label>
+												<input type="text" id="yearsworked" value="5" />
+											</div>
+											<div class="col-4 col-12-xsmall">
+												<label class="col-form-label"># of Years at Company</label>
+												<input type="text" id="atcompany" value="5" />
+											</div>
+											<div class="col-4 col-12-xsmall">
+												<label class="col-form-label"># of Years w/ Current Manager</label>
+												<input type="text" id="manager" value="2" />
+											</div>
+											
+
+											<!-- NEW ROW -->
+											<div class="col-4 col-12-xsmall">
+												<label class="col-form-label">Job Distance From Home (miles)</label>
+												<input type="text" id="dist" value="5" />
+											</div>
+											<div class="col-4 col-12-xsmall">
+												<label class="col-form-label">Environment Satisfaction</label>
+												<select name="placegoodorno" id="enviro">
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
 													</select>
 											</div>
 											<div class="col-4 col-12-xsmall">
@@ -155,6 +198,11 @@
 
 											<!-- NEW ROW -->
 											<div class="col-4 col-12-xsmall">
+												<label class="col-form-label"># of Previous Companies</label>
+												<input type="text" id="companies" value="1" />
+											</div>
+
+											<!-- <div class="col-4 col-12-xsmall">
 												<label class="col-form-label">Work/Life Balance</label>
 												<select name="equilibrium" id="balance">
 													<option value="1">1</option>
@@ -180,78 +228,32 @@
 													<option value="3">3</option>
 													<option value="4">4</option>
 													</select>
-											</div>
+											</div> -->
 
 											<!-- NEW ROW -->
-											<div class="col-4 col-12-xsmall">
+											<!-- <div class="col-4 col-12-xsmall">
 												<label class="col-form-label">Gender</label>
 												<select name="whoyouis" id="gender">
 													<option>Female</option>
 													<option>Male</option>
 													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Environment Satisfaction</label>
-												<select name="placegoodorno" id="enviro">
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													</select>
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Age</label>
-												<input type="text" id="age" value="37" />
-											</div>
+											</div> -->
 
-											<!-- NEW ROW -->
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Job Distance From Home (miles)</label>
-												<input type="text" id="dist" value="5" />
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Monthly Income (USD)</label>
-												<input type="text" id="income" value="1500" />
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">% Salary Increase This Year</label>
-												<input type="text" id="salincrease" value="5" />
-											</div>
-
-											
 											<!-- <div class="col-4 col-12-xsmall">
 												<label class="col-form-label">Hours Worked Per Day</label>
 												<input type="text" id="stdhrs" value="8" />
 											</div> -->
-
-											<!-- NEW ROW -->
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label">Total Years Worked</label>
-												<input type="text" id="yearsworked" value="5" />
-											</div>
-											<div class="col-4 col-12-xsmall">
+											
+											<!-- <div class="col-4 col-12-xsmall">
 												<label class="col-form-label"># of Trainings Last Year</label>
 												<input type="text" id="training" value="1" />
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label"># of Years at Company</label>
-												<input type="text" id="atcompany" value="5" />
-											</div>
-
-											<!-- NEW ROW -->
+											</div> -->
 											
-											<div class="col-4 col-12-xsmall">
+											<!-- <div class="col-4 col-12-xsmall">
 												<label class="col-form-label"># of Years Since Last Promotion</label>
 												<input type="text" id="promotion" value="2" />
 											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label"># of Years w/ Current Manager</label>
-												<input type="text" id="manager" value="2" />
-											</div>
-											<div class="col-4 col-12-xsmall">
-												<label class="col-form-label"># of Previous Companies</label>
-												<input type="text" id="companies" value="1" />
-											</div>
+											 -->											
 
 											<div class="col-12">
 												<ul class="actions">

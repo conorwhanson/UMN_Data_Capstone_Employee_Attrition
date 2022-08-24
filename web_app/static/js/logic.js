@@ -70,7 +70,8 @@ function makePredictions() {
             console.log(returnedData);
 
             if (returnedData["prediction"] == 1) {
-                $("#output").text("You have attritioned. By Felicia.");
+                $("#output").text("You have attritioned. Bye Felicia.");
+                $("#img_output").append("<img id='pic' src='static/images/bye.gif'/>");
             } else {
                 $("#output").text("You and your company are ok...for now.");
             }

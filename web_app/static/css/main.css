@@ -2335,6 +2335,7 @@ input, select, textarea {
 div.dataTables_wrapper {
 	width: 100%;
 	margin: 1 auto;
+	padding: 0.5%
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
 	color: rgb(248, 234, 234) !important;

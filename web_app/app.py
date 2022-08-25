@@ -83,7 +83,7 @@ def makePredictions():
                                             pctsalhike, totalwrkyrs, yrsatco, yearsmanag,
                                             envsat, jobsat)
     print(prediction)
-    return(jsonify({"ok": True, "prediction": str(prediction)}))
+    return(jsonify({"ok": True, "prediction": float(prediction)}))
 
 @app.route("/graph", methods=["POST"])
 def graph():

@@ -69,17 +69,17 @@ function makePredictions() {
             // print it
             console.log(returnedData);
 
-            // if (returnedData["prediction"] == 1) {
-            //     $("#output").text("You have attritioned. Bye Felicia.");
-            //     $("#img_output").append("<img id='pic' src='static/images/bye.gif'/>");
-            // } else {
-            //     $("#output").text("You and your company are ok...for now.");
-            // }
+            if ((returnedData["prediction"] * 100) >= 50) {
+                $("#output").text("Your probability of leaving is " + (returnedData["prediction"] * 100).toFixed(1) + "% and you will likely attrition. Bye Felicia.");
+                $("#img_output").append("<img id='pic' src='static/images/bye.gif'/>");
+            } else {
+                $("#output").text("You have a " + (returnedData["prediction"] * 100).toFixed(1) + "% chance of attrition. You and your company are ok...for now.");
+            }
         },
-        // error: function(XMLHttpRequest, textStatus, errorThrown) {
-        //     alert("Status: " + textStatus);
-        //     alert("Error: " + errorThrown);
-        // }
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            alert("Status: " + textStatus);
+            alert("Error: " + errorThrown);
+        }
     });
 
 }

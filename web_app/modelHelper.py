@@ -20,7 +20,6 @@ class ModelHelper():
 
         # put input_pred into an array and run it through the model
         X = np.array(input_pred)
-        pred_proba = model.predict_proba(X)
         preds_singular = model.predict_proba(X)
 
         # output the prediction

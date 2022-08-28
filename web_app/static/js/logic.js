@@ -70,7 +70,7 @@ function makePredictions() {
             console.log(returnedData);
 
             if ((returnedData["prediction"] * 100) >= 50) {
-                $("#output").text("Your probability of leaving is " + (returnedData["prediction"] * 100).toFixed(1) + "% and you will likely attrition. Bye Felicia.");
+                $("#output").text("You have a " + (returnedData["prediction"] * 100).toFixed(1) + "% chance of attrition and you are more likely to leave.");
                 $("#img_output").append("<img id='pic' src='static/images/bye.gif'/>");
             } else {
                 $("#output").text("You have a " + (returnedData["prediction"] * 100).toFixed(1) + "% chance of attrition. You and your company are ok...for now.");

@@ -44,9 +44,18 @@ function graphFromSQL() {
 }
 
 function makeGraph(inp_data) {
+
+    // var attryes = inp_data.filter(function(element){
+    //     return element.Attrition == "Yes";
+    // });
+
+    // var attrno = inp_data.filter(function(element){
+    //     return element.Attrition == "No";
+    // });
+
     var trace1 = {
-        x: inp_data.filter(x => x.Attrition == "Yes").map(x => x.Attrition),
-        y: inp_data.filter(x => x.Attrition == "Yes").map(x => x.Age),
+        x: inp_data.filter(x => x.Attrition == 'Yes').map(x => x.Attrition),
+        y: inp_data.filter(x => x.Attrition == 'Yes').map(x => x.Age),
         mode: 'markers',
         type: 'bar',
         marker: {
@@ -56,8 +65,8 @@ function makeGraph(inp_data) {
     };
 
     var trace2 = {
-        x: inp_data.filter(x => x.Attrition == "No").map(x => x.Attrition),
-        y: inp_data.filter(x => x.Attrition == "No").map(x => x.Age),
+        x: inp_data.filter(x => x.Attrition == 'No').map(x => x.Attrition),
+        y: inp_data.filter(x => x.Attrition == 'No').map(x => x.Age),
         mode: 'markers',
         type: 'bar',
         marker: {

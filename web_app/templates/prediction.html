@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="shortcut icon" href="static/images/leaving.png"> 
 		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -27,13 +28,13 @@
 									<div id="menu">
 										<ul>
 											<li><a href="/">Home</a></li>
-                      <li><a href="/prediction">Prediction Engine</a></li>
-                      <li><a href="/dataviz">The Data</a></li>
-                      <li><a href="/plotly">Plotly</a></li>
-                      <li><a href="/datareport">Documentation</a></li>
-                      <li><a href="/aboutus">About Us</a></li>
-                      <li><a href="/workscited">Works Cited</a></li>
+											<li><a href="/prediction">Prediction Engine</a></li>
+											<li><a href="/dataviz">Tableau Dashboard</a></li>
+											<li><a href="/plotly">Plotly</a></li>
 											<li><a href="/explore">Explore the Data</a></li>
+											<li><a href="/datareport">Documentation</a></li>
+											<li><a href="/workscited">Works Cited</a></li>
+											<li><a href="/aboutus">About Us</a></li>
 										</ul>
 									</div>
 								</li>
@@ -50,13 +51,14 @@
 						<section class="wrapper style5">
 							<div class="inner">
 
-								<h3>Lorem ipsum dolor</h3>
-								<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo, tempus sed finibus eget, fringilla quis risus. Maecenas et lorem quis sem varius sagittis et a est. Maecenas iaculis iaculis sem. Donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
-
-								<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec dui cursus, posuere dui eget interdum. Fusce lectus magna, sagittis at facilisis vitae, pellentesque at etiam. Quisque posuere leo quis sem commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
-
-								<hr />
-									<h4 align="center">Predict Attrition</h4>
+								<h3>Predicting Employee Attrition</h3>
+										<p>Drawing from a <a href="https://www.kaggle.com/datasets/vjchoudhary7/hr-analytics-case-study" target="_blank" style="color: #7f6a93">dataset</a> of about 4,000 rows, we preprocessed the data 
+										and then fed it into a machine learning model using a balance random forest clasifier.
+										The model outputs a percentage indicating the likelihood the result is 
+										categorized as attrition or not. Change parameters below to see which factors may increase or decrease attrition probability.
+									</p>
+							<hr/>
+									<!-- <h4 align="center">Predict Attrition</h4> -->
 									<h6 align="center">Input your parameters below to predict employee attrition</h6>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">

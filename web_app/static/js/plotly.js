@@ -52,30 +52,32 @@ function makeGraph(inp_data) {
     // var attrno = inp_data.filter(function(element){
     //     return element.Attrition == "No";
     // });
+    console.log(inp_data[0])
+    console.log(inp_data[1])
 
     var trace1 = {
-        x: inp_data.filter(x => x.Attrition == 'Yes').map(x => x.Attrition),
-        y: inp_data.filter(x => x.Attrition == 'Yes').map(x => x.Age),
+        x: ['Yes', 'No'],
+        y: [(inp_data[0]), (inp_data[1])],
         mode: 'markers',
         type: 'bar',
         marker: {
-            color: "rgba(134, 96, 142, 1)"
+            color: ["rgba(134, 96, 142, 1)", "rgba(251, 175, 0, 1)"]
         },
-        name: "Attritioned"
+        // name: "Left the Company"
     };
 
-    var trace2 = {
-        x: inp_data.filter(x => x.Attrition == 'No').map(x => x.Attrition),
-        y: inp_data.filter(x => x.Attrition == 'No').map(x => x.Age),
-        mode: 'markers',
-        type: 'bar',
-        marker: {
-            color: "rgba(251, 175, 0, 1)"
-        },
-        name: "Non-Attrition"
-    };
+    // var trace2 = {
+    //     x: 'No',
+    //     y: inp_data[1],
+    //     mode: 'markers',
+    //     type: 'bar',
+    //     marker: {
+    //         color: "rgba(251, 175, 0, 1)"
+    //     },
+    //     name: "Stayed"
+    // };
 
-    var data = [trace1, trace2];
+    var data = [trace1,];
 
     var layout = {
         title: 'Employee Attrition by Age Group',

@@ -28,4 +28,6 @@ class GraphHelper():
 
         df = pd.read_sql(query, con=self.engine)
 
-        return df
+        df2 = df.Attrition.value_counts()
+
+        return df2

@@ -56,7 +56,7 @@ function makeGraph(inp_data) {
     console.log(inp_data[1])
 
     var trace1 = {
-        x: ['Yes', 'No'],
+        x: ['No', 'Yes'],
         y: [(inp_data[0]), (inp_data[1])],
         mode: 'markers',
         type: 'bar',
@@ -81,7 +81,7 @@ function makeGraph(inp_data) {
 
     var layout = {
         title: 'Employee Attrition by Age Group',
-        xaxis: { "title": "Attritioned or Not" },
+        xaxis: { "title": "Attritioned" },
         yaxis: { "title": "Count" }
     };
 

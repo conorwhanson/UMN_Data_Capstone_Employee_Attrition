@@ -96,6 +96,17 @@ def graph():
     df = graphHelper.getDataFromDatabase(min_age, max_age)
     return(jsonify(json.loads(df.to_json(orient="records"))))
 
+@app.route("/scattergraph", methods=["POST"])
+def graph2():
+    content = request.json["data"]
+    print(content)
+    
+    # parse
+    min_age = float(content["min_age"])
+    max_age = float(content["max_age"])
+    df = graphHelper.getDataFromDatabase2(min_age, max_age)
+    return(jsonify(json.loads(df.to_json(orient="records"))))
+
 @app.route("/getSQL", methods=["POST"])
 def get_table():
     content = request.json["data2"]

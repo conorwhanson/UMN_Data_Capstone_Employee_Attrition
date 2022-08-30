@@ -41,6 +41,23 @@ function graphFromSQL() {
         }
     });
 
+    $.ajax({
+        type: "POST",
+        url: "/scattergraph",
+        contentType: 'application/json;charset=UTF-8',
+        data: JSON.stringify({ "data": payload }),
+        success: function(returnedData) {
+            // print it
+            console.log(returnedData);
+            makeGraph2(returnedData);
+
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            alert("Status: " + textStatus);
+            alert("Error: " + errorThrown);
+        }
+    });
+
 }
 
 function makeGraph(inp_data) {
@@ -80,10 +97,61 @@ function makeGraph(inp_data) {
     var data = [trace1,];
 
     var layout = {
-        title: 'Employee Attrition by Age Group',
-        xaxis: { "title": "Attritioned" },
+        title: 'Employee Attrition <br> by Age Group',
+        xaxis: { "title": "Attritioned or Not" },
         yaxis: { "title": "Count" }
     };
 
     Plotly.newPlot('bar', data, layout);
+}
+
+function makeGraph2(inp_data) {
+
+    // var attryes = inp_data.filter(function(element){
+    //     return element.Attrition == "Yes";
+    // });
+
+    // var attrno = inp_data.filter(function(element){
+    //     return element.Attrition == "No";
+    // });
+    console.log(inp_data[0])
+    console.log(inp_data[1])
+
+    var trace1 = {
+        x: inp_data.filter(x => x.Attrition  == "No").map(x => x.Age),
+        y: inp_data.filter(x => x.Attrition  == "No").map(x => x.MonthlyIncome),
+        mode: 'markers',
+        type: 'scatter',
+        marker: {
+            color: "rgba(134, 96, 142, 1)",
+            size: 12,
+            symbol: 'diamond'
+        },
+        name: "Stayed"
+    };
+
+    var trace2 = {
+        x: inp_data.filter(x => x.Attrition == "Yes").map(x => x.Age),
+        y: inp_data.filter(x => x.Attrition == "Yes").map(x => x.MonthlyIncome),
+        mode: 'markers',
+        type: 'scatter',
+        marker: {
+            color: "rgba(251, 175, 0, 1)",
+            size: 9,
+            symbol: 'cross'
+        },
+        name: "Left the Company"
+    };
+
+    var data = [trace1, trace2];
+
+    var layout = {
+        title: 'Monthly Income by Age',
+        xaxis: { "title": "Age",
+                "dtick": 5},
+        yaxis: { "title": "Monthly Income ($)" },
+        legend: {"orientation": "h"}
+    };
+
+    Plotly.newPlot('scatter', data, layout);
 }

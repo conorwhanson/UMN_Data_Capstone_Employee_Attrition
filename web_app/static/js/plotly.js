@@ -97,7 +97,7 @@ function makeGraph(inp_data) {
     var data = [trace1,];
 
     var layout = {
-        title: 'Employee Attrition by Age Group',
+        title: 'Employee Attrition <br> by Age Group',
         xaxis: { "title": "Attritioned or Not" },
         yaxis: { "title": "Count" }
     };
@@ -123,7 +123,9 @@ function makeGraph2(inp_data) {
         mode: 'markers',
         type: 'scatter',
         marker: {
-            color: "rgba(134, 96, 142, 1)"
+            color: "rgba(134, 96, 142, 1)",
+            size: 12,
+            symbol: 'diamond'
         },
         name: "Stayed"
     };
@@ -134,7 +136,9 @@ function makeGraph2(inp_data) {
         mode: 'markers',
         type: 'scatter',
         marker: {
-            color: "rgba(251, 175, 0, 1)"
+            color: "rgba(251, 175, 0, 1)",
+            size: 9,
+            symbol: 'cross'
         },
         name: "Left the Company"
     };
@@ -145,7 +149,8 @@ function makeGraph2(inp_data) {
         title: 'Monthly Income by Age',
         xaxis: { "title": "Age",
                 "dtick": 5},
-        yaxis: { "title": "Monthly Income ($)" }
+        yaxis: { "title": "Monthly Income ($)" },
+        legend: {"orientation": "h"}
     };
 
     Plotly.newPlot('scatter', data, layout);

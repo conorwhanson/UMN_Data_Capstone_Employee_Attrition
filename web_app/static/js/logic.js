@@ -69,6 +69,8 @@ function makePredictions() {
             // print it
             console.log(returnedData);
 
+            $("#img_output").empty();
+
             if ((returnedData["prediction"] * 100) >= 50) {
                 $("#output").text("You have a " + (returnedData["prediction"] * 100).toFixed(1) + "% chance of attrition and you are more likely to leave.");
                 $("#img_output").append("<img id='pic' src='static/images/bye.gif'/>");

@@ -1,7 +1,7 @@
 # Predicting Employee Attrition with Supervised Machine Learning
 
 ### Overview
-This project consists of a full-stack web application which incorporates a machine learning model to predict employee attrition. A user may interact with multiple pages, allowing them to see the data from a variety of angles. A Plotly page graphs attrition by user-defined age groups; a SQLite database page allows a user to query the database by attrition, gender, and age ranges; a Tableau page gives a user an interactive dashboard on which various filters can be applied and the data immediately visualized; finally, a prediction page allows a user to input parameters which are run through a balanced random forest machine learning model and the attrition likelihood is displayed. 
+This project consists of a [full-stack web application](https://uofm-2022-attrition.herokuapp.com/) which incorporates a machine learning model to predict employee attrition. A user may interact with multiple pages, allowing them to see the data from a variety of angles. A Plotly page graphs attrition by user-defined age groups; a SQLite database page allows a user to query the database by attrition, gender, and age ranges; a Tableau page gives a user an interactive dashboard on which various filters can be applied and the data immediately visualized; finally, a prediction page allows a user to input parameters which are run through a balanced random forest machine learning model and the attrition likelihood is displayed. 
 
 Data source: [Kaggle HR Attrition data set](https://www.kaggle.com/datasets/vjchoudhary7/hr-analytics-case-study)
 
